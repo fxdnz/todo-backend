@@ -21,7 +21,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-CORS_ALLOWED_ORIGINS = ['https://todo-list-miranda.netlify.app', 'http://localhost:5173/']
+CORS_ALLOWED_ORIGINS = ['https://todo-list-miranda.netlify.app']
 
 STORAGES = {
     "default": {
