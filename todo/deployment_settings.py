@@ -6,11 +6,6 @@ from .settings import BASE_DIR
 ALLOWED_HOSTS = [os.environ.get('RENDER_EXTERNAL_HOSTNAME')]
 CSRF_TRUSTED_ORIGINS = ['https://'+os.environ.get('RENDER_EXTERNAL_HOSTNAME')]
 
-# Read environment variables
-DJANGO_SUPERUSER_USERNAME = os.getenv('DJANGO_SUPERUSER_USERNAME')
-DJANGO_SUPERUSER_EMAIL = os.getenv('DJANGO_SUPERUSER_EMAIL')
-DJANGO_SUPERUSER_PASSWORD = os.getenv('DJANGO_SUPERUSER_PASSWORD')
-
 DEBUG = False
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
@@ -26,7 +21,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-CORS_ALLOWED_ORIGINS = ['https://todo-list-miranda.netlify.app']
+CORS_ALLOWED_ORIGINS = ['https://todo-list-miranda.netlify.app', ]
 
 STORAGES = {
     "default": {
