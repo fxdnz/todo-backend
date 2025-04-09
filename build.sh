@@ -11,8 +11,5 @@ python manage.py migrate
 
 # Check if CREATE_SUPERUSER is set to 'true' and create superuser
 if [[$CREATE_SUPERUSER]]; then
-    python manage.py createsuperuser --no-input \
-        --username "$DJANGO_SUPERUSER_USERNAME" \
-        --email "$DJANGO_SUPERUSER_EMAIL" \
-        --password "$DJANGO_SUPERUSER_PASSWORD"
+    python manage.py createsuperuser --no-input
 fi
